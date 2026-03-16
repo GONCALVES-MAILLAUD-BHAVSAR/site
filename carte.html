@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Carte interactive – Grotte de Châtelperron</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="CSS/style.css">
+
+  <!-- Leaflet -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+</head>
+
+<body>
+
+  <div id="map-transition-overlay">
+    <div class="scan-grid"></div>
+    <div class="scan-bar"></div>
+    <div class="scan-text">Initialisation du relevé SIG...</div>
+  </div>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+       <img src="images/logo-dl.png" alt="Logo DL Archives" class="logo-img">
+      </a>
+
+    </div>
+
+    <ul class="menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+
+      <li class="dropdown">
+        <a href="synthese.html">Le cold case</a>
+        <ul class="submenu">
+          <li><a href="synthese.html#contexte">Contexte</a></li>
+          <li><a href="synthese.html#decouvertes">Découvertes</a></li>
+          <li><a href="synthese.html#debats">Débats scientifiques</a></li>
+        </ul>
+      </li>
+      <li><a href="carte.html">Carte interactive</a></li>
+      <li><a href="recherche.html">Recherche documentaire</a></li>
+      <li><a href="sources.html">Sources</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="page-content">
+
+  <section class="map-section">
+    <h1>Carte interactive des sites préhistoriques</h1>
+
+    <p>
+      Cette carte permet de situer la grotte de Châtelperron et d’autres sites
+      majeurs associés aux débats sur le Châtelperronien et les populations néandertaliennes.
+    </p>
+
+    <div id="map"></div>
+
+    <p class="map-caption">
+      Cliquez sur le marqueur pour découvrir le site.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>Licence 2 Archéologie – Paris 1 Panthéon-Sorbonne</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/map.js"></script> 
+<script src="js/slider.js"></script>
+
+</body>
+</html>
